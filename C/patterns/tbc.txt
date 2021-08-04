@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    int n, lines , col;
+    scanf("%d", &n);
+	
+	int end =((2*n)-1) , num , i=1 , start=1 ,flag=0;
+  	// Complete the code to print the pattern.
+      
+    for(lines=start;  lines <=end ;lines ++)
+    {			
+        for(col=start ; col <=end ;col++)
+        {
+			
+          if ( (lines ==1) || (col ==1) || (lines == end) || (col==end) )
+          {
+               printf("%d ",n);
+          }
+		  else if ( (lines == (end/2)+1) && (col == (end/2)+1  )  )
+		  {
+			  printf("1 ");
+		  }
+		  else 
+		  {
+
+				printf("%d ",n-i);
+				
+		  }			  
+
+        }
+	
+	 
+        printf("\n");
+        
+    }  
+      
+      
+      
+      
+    return 0;
+}
